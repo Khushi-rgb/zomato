@@ -14,7 +14,7 @@ const Home = () => {
 
                 console.log(response.data);
 
-                setVideos(response.data.foodItems)
+               setVideos(response.data.foodItems || []);
             })
             .catch(() => { /* noop: optionally handle error */ })
     }, [])
